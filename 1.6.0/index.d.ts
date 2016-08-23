@@ -2,16 +2,16 @@
 // Project: https://github.com/floridoo/gulp-sourcemaps
 // Original Definitions by: Asana <https://asana.com>
 
-interface InitOptions {
+export interface InitOptions {
   loadMaps?: boolean;
   debug?: boolean;
 }
 
-interface WriteMapper {
+export interface WriteMapper {
   (filePath: string): string;
 }
 
-interface WriteOptions {
+export interface WriteOptions {
   addComment?: boolean;
   includeContent?: boolean;
   sourceRoot?: string | WriteMapper;

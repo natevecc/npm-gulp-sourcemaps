@@ -4,31 +4,31 @@
 
 import * as File from 'vinyl';
 
-interface InitOptions {
-loadMaps?: boolean;
-identityMap?: boolean;
-debug?: boolean;
+export interface InitOptions {
+  loadMaps?: boolean;
+  identityMap?: boolean;
+  debug?: boolean;
 }
 
-interface WriteMapper {
-    (file: string): string;
+export interface WriteMapper {
+  (file: string): string;
 }
 
-interface WriteFileMapper {
-    (file: File): string;
+export interface WriteFileMapper {
+  (file: File): string;
 }
 
-interface WriteOptions {
-    addComment?: boolean;
-    includeContent?: boolean;
-    sourceRoot?: string | WriteMapper;
-    destPath?: string;
-    sourceMappingURLPrefix?: string | WriteMapper;
-    sourceMappingURL?: WriteFileMapper;
-    mapFile?: WriteMapper;
-    mapSources?: WriteMapper;
-    debug?: boolean;
-    charset?: string;
+export interface WriteOptions {
+  addComment?: boolean;
+  includeContent?: boolean;
+  sourceRoot?: string | WriteMapper;
+  destPath?: string;
+  sourceMappingURLPrefix?: string | WriteMapper;
+  sourceMappingURL?: WriteFileMapper;
+  mapFile?: WriteMapper;
+  mapSources?: WriteMapper;
+  debug?: boolean;
+  charset?: string;
 }
 
 export function init(opts?: InitOptions): NodeJS.ReadWriteStream;
