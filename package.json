@@ -3,15 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "lint": "echo linting... && tslint \"**/*.ts\" -e \"source/**\" -e \"source-test/**\" -e \"out/**\" -e \"node_modules/**\" -e \"typings/**\"",
-    "browser-test": "echo running browser tests... && echo no browser test",
-    "source-test": "echo running source tests... &&  echo no source test",
-    "watch": "onchange -w \"**/*.ts\" -i -e \"out/**\" -- npm -s run build+test",
-    "publish": "npm -s run lint+build+test && echo please publish to typings/registry",
-    "all-tests": "npm test",
-    "build+test": "npm run build && npm run all-tests",
-    "lint+build+test": "npm run lint && npm run build+test",
-    "prepublish": "typings install",
+    "lint": "echo linting... && tslint \"**/*.ts\" -e \"**/out/**\" -e \"node_modules/**\" -e \"**/typings/**\"",
 
     "prepare": "echo Starting preparing... && npm run prepare-1.6.0 & npm run prepare-2.0.0-alpha && echo Prepare completed.",
     "prepare-1.6.0": "echo Installing typings in 1.6.0... && cd 1.6.0 && typings install",
@@ -32,7 +24,6 @@
     "build": "npm run build-ts && npm run bundle"
   },
   "devDependencies": {
-    "gulp-sourcemaps": "1.6.0",
     "tslint": "^3.15.1",
     "tslint-config-typings": "^0.2.3",
     "typescript": "1.8.10",

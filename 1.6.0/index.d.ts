@@ -2,7 +2,7 @@
 // Project: https://github.com/floridoo/gulp-sourcemaps
 // Original Definitions by: Asana <https://asana.com>
 
-declare module sourcemaps {
+declare namespace sourcemaps {
   interface InitOptions {
     loadMaps?: boolean;
     debug?: boolean;

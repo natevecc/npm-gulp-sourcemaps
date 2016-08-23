@@ -2,7 +2,7 @@
 // Project: https://github.com/floridoo/gulp-sourcemaps
 // Original Definitions by: Asana <https://asana.com>
 
-import * as File from "vinyl"
+import * as File from 'vinyl';
 
 declare namespace gulpsourcemaps {
   interface InitOptions {
@@ -16,8 +16,7 @@ declare namespace gulpsourcemaps {
   }
 
   interface WriteFileMapper {
-      // file parameter needs to be updated with the vinyl file object definition
-      (file: any): string;
+      (file: File): string;
   }
 
   interface WriteOptions {

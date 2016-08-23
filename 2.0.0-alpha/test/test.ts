@@ -1,3 +1,4 @@
+/* tslint:disable:no-unused-variable */
 import gulp = require('gulp');
 import sourcemaps = require('gulp-sourcemaps');
 
@@ -41,7 +42,7 @@ gulp.task('javascript', function() {
 });
 
 gulp.task('javascript', function() {
-    var stream = gulp.src('src/**/*.js')
+    const stream = gulp.src('src/**/*.js')
         .pipe(sourcemaps.init())
         .pipe(plugin1())
         .pipe(plugin2())
@@ -50,7 +51,7 @@ gulp.task('javascript', function() {
 });
 
 gulp.task('javascript', function() {
-    var stream = gulp.src('src/**/*.js')
+    const stream = gulp.src('src/**/*.js')
         .pipe(sourcemaps.init())
         .pipe(plugin1())
         .pipe(plugin2())
@@ -59,7 +60,7 @@ gulp.task('javascript', function() {
 });
 
 gulp.task('javascript', function() {
-    var stream = gulp.src('src/**/*.js')
+    const stream = gulp.src('src/**/*.js')
         .pipe(sourcemaps.init())
         .pipe(plugin1())
         .pipe(plugin2())
@@ -73,7 +74,7 @@ gulp.task('javascript', function() {
 });
 
 gulp.task('javascript', function() {
-    var stream = gulp.src('src/**/*.js')
+    const stream = gulp.src('src/**/*.js')
         .pipe(sourcemaps.init())
         .pipe(plugin1())
         .pipe(plugin2())
@@ -84,20 +85,20 @@ gulp.task('javascript', function() {
 });
 
 gulp.task('javascript', function() {
-    var stream = gulp.src('src/**/*.js')
+    const stream = gulp.src('src/**/*.js')
         .pipe(sourcemaps.init())
         .pipe(plugin1())
         .pipe(plugin2())
         .pipe(sourcemaps.write('../maps', {
             sourceMappingURLPrefix: function(file) {
-                return 'https://asset-host.example.com/assets'
+                return 'https://asset-host.example.com/assets';
             }
         }))
         .pipe(gulp.dest('public/scripts'));
 });
 
 gulp.task('javascript', function() {
-  var stream = gulp.src('src/**/*.js')
+  const stream = gulp.src('src/**/*.js')
     .pipe(sourcemaps.init())
       .pipe(plugin1())
       .pipe(plugin2())
@@ -110,7 +111,7 @@ gulp.task('javascript', function() {
 });
 
 gulp.task('javascript', function() {
-  var stream = gulp.src('src/**/*.js')
+  const stream = gulp.src('src/**/*.js')
     .pipe(sourcemaps.init())
       .pipe(plugin1())
       .pipe(plugin2())
@@ -124,7 +125,7 @@ gulp.task('javascript', function() {
 });
 
 gulp.task('javascript', function() {
-  var stream = gulp.src('src/**/*.js')
+  const stream = gulp.src('src/**/*.js')
     .pipe(sourcemaps.init())
       .pipe(plugin1())
       .pipe(plugin2())
