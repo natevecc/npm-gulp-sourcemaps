@@ -12,12 +12,17 @@ MIT
 ```sh
 # Fork this repo, then
 npm install
-
-npm run watch
-
-# add tests, make changes, pass tests ... then [ctrl+c]
-npm run publish
 ```
+
+```sh
+# add tests, make changes, pass tests and lint
+npm run prepare
+npm run build
+npm test
+npm run lint
+```
+
+Then update typings registry.
 
 ## Updating
 
