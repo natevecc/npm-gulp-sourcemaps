@@ -6,7 +6,10 @@
   "globalDevDependencies": {
     "node": "registry:env/node#6.0.0+20160813135048"
   },
+  "dependencies": {
+    "vinyl": "registry:npm/vinyl#1.2.0+20160817093728"
+  },
   "devDependencies": {
-    "blue-tape": "registry:npm/blue-tape#0.2.0+20160723033700"
+    "gulp": "registry:npm/gulp#4.0.0-alpha.2+20160817105618"
   }
 }
