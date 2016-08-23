@@ -13,18 +13,23 @@
     "lint+build+test": "npm run lint && npm run build+test",
     "prepublish": "typings install",
 
+    "prepare": "echo Starting preparing... && npm run prepare-1.6.0 & npm run prepare-2.0.0-alpha && echo Prepare completed.",
     "prepare-1.6.0": "echo Installing typings in 1.6.0... && cd 1.6.0 && typings install",
+    "prepare-2.0.0-alpha": "echo Installing typings in 2.0.0-alpha... && cd 2.0.0-alpha && typings install",
+
+    "build-ts": "echo Starting building... &&  npm run build-ts-1.6.0 & npm run build-ts-2.0.0-alpha && echo Build typescript completed.",
     "build-ts-1.6.0": "echo Building typescript in 1.6.0... && tsc -p 1.6.0",
+    "build-ts-2.0.0-alpha": "echo Building typescript in 2.0.0-alpha... && tsc -p 2.0.0-alpha",
+
+    "bundle": "echo Starting bundling... && npm run bundle-1.6.0 & npm run bundle-2.0.0-alpha",
     "bundle-1.6.0": "echo Bundling typings in 1.6.0... && cd 1.6.0 && typings bundle -o out/index.d.ts",
+    "bundle-2.0.0-alpha": "echo Bundling typings in 2.0.0-alpha... && cd 2.0.0-alpha && typings bundle -o out/index.d.ts",
+
+    "test": "echo Starting tests... && npm run test-1.6.0 & npm run test-2.0.0-alpha",
     "test-1.6.0": "echo Runing test in 1.6.0... && tsc -p 1.6.0/test && echo Test in 1.6.0 successfully completed.",
+    "test-2.0.0-alpha": "echo Runing test in 2.0.0-alpha... && tsc -p 2.0.0-alpha/test && echo Test in 2.0.0-alpha successfully completed.",
 
-
-    "build-ts": "echo Starting building... &&  npm run build-ts-1.6.0 && echo Build typescript completed.",
-    "bundle": "echo Starting bundling... && npm run bundle-1.6.0",
-    "build": "npm run build-ts && npm run bundle",
-
-    "test": "echo Starting tests... && npm run test-1.6.0",
-    "prepare": "echo Starting preparing... && npm run prepare-1.6.0 && echo Prepare completed."
+    "build": "npm run build-ts && npm run bundle"
   },
   "devDependencies": {
     "gulp-sourcemaps": "1.6.0",
